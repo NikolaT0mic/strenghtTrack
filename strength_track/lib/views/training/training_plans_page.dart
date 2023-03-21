@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../styles/text_styles.dart';
-import '../widgets/training_plans_page_widgets.dart';
+import '../../styles/text_styles.dart';
+import '../../widgets/training_plans_page_widgets.dart';
 
 class TrainingPlansPage extends StatefulWidget {
   const TrainingPlansPage({Key? key}) : super(key: key);

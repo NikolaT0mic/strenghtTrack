@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Rücken Tag A",
+    "exercises":[
+    ]
+  },
+  {
+    "name": "Kniebeuge",
+    "category": "Frei",
+    "mainMuscle": "Beine",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Kreuzheben",
+    "category": "Frei",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Lat Zug",
+    "category": "Frei",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  }
+]

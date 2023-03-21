@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
-import '/views/training_plans_page.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:strength_track/views/exercise/exercises_page.dart';
+import 'package:strength_track/views/not_implemented_page.dart';
+import 'package:strength_track/views/weight/weight_log_page.dart';
+import 'views/training/training_plans_page.dart';
+import 'views/analysis_page.dart';
+import 'widgets/common.dart';
 
-void main() {
-  runApp(const StrenthTrackApp());
+void main() async {
+  await Hive.initFlutter();
+  runApp(const StrengthTrackApp());
 }
 
-class StrenthTrackApp extends StatelessWidget {
-  const StrenthTrackApp({super.key});
+class StrengthTrackApp extends StatelessWidget {
+  const StrengthTrackApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,18 +37,51 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  int _selectedIndex = 0;
+  final _pageOptions = [TrainingPlansPage(), ExercisePage(), AnalysisPage(), NotImplementedPage(), WeightLogPage()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          TrainingPlansPage()
+      appBar: standardAppbar,
+      body: _pageOptions[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        onTap: (int index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Trainings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.directions_walk),
+            label: 'Übungen',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.analytics),
+            label: 'Analyse',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Weightlog',
+          ),
         ],
-      ),
+      )
+      // Column(
+      //   mainAxisAlignment: MainAxisAlignment.start,
+      //   children: <Widget>[
+      //     TrainingPlansPage()
+      //   ],
+      // ),
     );
   }
 }

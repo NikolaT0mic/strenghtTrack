@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Bankdrücken",
+    "category": "Frei",
+    "mainMuscle": "Brust",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Kniebeuge",
+    "category": "Frei",
+    "mainMuscle": "Beine",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Kreuzheben",
+    "category": "Frei",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Lat Zug",
+    "category": "Geführt",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Rudern",
+    "category": "Geführt",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Rudern",
+    "category": "Frei",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  },
+  {
+    "name": "Rudern",
+    "category": "Frei",
+    "mainMuscle": "Rücken",
+    "dropdowns":[
+    ]
+  }
+]
